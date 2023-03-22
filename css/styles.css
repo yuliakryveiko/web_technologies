@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  color: #182628;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  background-color: #013b3f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+nav * {
+  color: #f2f2f2;
+}
+nav .logo a {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav .links {
+  display: flex;
+  align-items: center;
+}
+nav .links a {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 20px;
+  text-decoration: none;
+}
+nav .links a:hover, nav .links a.active {
+  color: #a3c4c7;
+}
+
+.button {
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.button.button-signup {
+  background-color: #f2f2f2;
+  color: #013b3f;
+}
+.button.button-submit {
+  background-color: #013b3f;
+  color: #f2f2f2;
+}
+.button:hover, .button.button-signup:hover, .button.button-submit:hover {
+  background-color: #a3c4c7;
+  color: #182628;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+.container.container-user {
+  max-width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+}
+.container.container-transaction {
+  max-width: 90%;
+  margin: 50px auto;
+  background-color: #a3c4c7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+.container.container-transfer {
+  margin-top: 30px;
+  max-width: 70%;
+  padding: 1rem;
+}
+.container h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.container h2 {
+  margin-bottom: 20px;
+}
+.container p {
+  font-size: 18px;
+  line-height: 2;
+  color: #182628;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #182628;
+}
+form input[type=text], form input[type=email], form input[type=password] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form p {
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    flex-direction: column;
+  }
+  .logo a {
+    margin-bottom: 10px;
+  }
+}
+.box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 350px;
+  height: 550px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.box .button {
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+.box img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.balance {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container-transaction {
+  width: 90%;
+  margin: 0 auto;
+}
+.container-transaction .filters {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.container-transaction .filters label {
+  margin-right: 3rem;
+}
+.container-transaction .filters input[type=date],
+.container-transaction .filters select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.container-transaction table {
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.container-transaction table thead {
+  background-color: #73a6aa;
+}
+.container-transaction table thead th {
+  padding: 1rem;
+  text-align: center;
+}
+.container-transaction table tbody tr:nth-child(even) {
+  background-color: #8db6b9;
+}
+.container-transaction table tbody td {
+  padding: 1.2rem;
+}
+
+.wallet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wallet-container .balance-section {
+  margin-top: 30px;
+  text-align: center;
+}
+.wallet-container .balance-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.wallet-container .balance-section p {
+  font-size: 24px;
+  font-weight: bold;
+}
+.wallet-container .wallet-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+}
+.wallet-container .wallet-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.wallet-container .wallet-form form .form-group {
+  margin-bottom: 10px;
+}
+.wallet-container .wallet-form form .form-group label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.wallet-container .wallet-form form .form-group input[type=text],
+.wallet-container .wallet-form form .form-group input[type=number] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 2px solid gray;
+  transition: border-color 0.3s ease;
+}
+.wallet-container .wallet-form form .form-group input[type=text]:focus,
+.wallet-container .wallet-form form .form-group input[type=number]:focus {
+  outline: none;
+  border-color: black;
+}/*# sourceMappingURL=styles.css.map */
