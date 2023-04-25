@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Replenish - CashFlow</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Withdraw - CashFlow</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body>
   <nav>
@@ -18,22 +18,26 @@
   <div class="wallet-container">
     <div class="balance-section">
       <h2>Current Balance</h2>
-      <p>$2,500.00</p>
+      <p>$5,000.00</p>
     </div>
     <div class="wallet-form">
       <form>
         <div class="form-group">
-        <h2>Replenish Wallet</h2>
+          <h2>Withdraw to</h2>
           <label for="card-info">Card Info</label>
           <input type="text" id="card-info" name="card-info" placeholder="Enter card details">
         </div>
         <div class="form-group">
           <label for="amount">Amount</label>
-          <input type="number" id="amount" name="amount" min="1" step="0.01" placeholder="Enter amount to replenish">
+          <input type="number" id="amount" name="amount" min="1" step="0.01" placeholder="Enter amount to withdraw">
         </div>
-        <a class="button button-submit">Replenish</a>
+        <div class="form-group">
+          <label for="amount-to-withdraw">Amount to Withdraw</label>
+          <input type="text" id="amount-to-withdraw" name="amount-to-withdraw" value="$0.00" readonly>
+        </div>
+        <a class="button button-submit">Withdraw</a>
       </form>
     </div>
-  </div>  
+  </div>
 </body>
 </html>  
