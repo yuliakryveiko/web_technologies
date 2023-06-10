@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>Transfer - CashFlow</title>
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/web-technologies-1/css/styles.css">
+  <script src="/web-technologies-1/javascript/sendmoney.js"> </script>
 </head>
 <body>
   <nav>
@@ -18,25 +19,21 @@
 
   <div class="container container-transfer">
     <h2>Send your money on anytime, anywhere in the world.</h2>
-    <form>
+    <form id="send-form">
       <div class="form-row">
         <div class="form-group">
-          <label for="recipient-name">Receiver Username</label>
-          <input type="text" id="recipient-name" name="recipient-name">
-        </div>
-        <div class="form-group">
-          <label for="recipient-email">Receiver Email</label>
-          <input type="email" id="recipient-email" name="recipient-email">
+          <label for="recipient-name">Receiver ID</label>
+          <input type="text" id="recipient-name" name="sentToUser">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label for="transfer-amount">You Send</label>
           <div class="input-group">
-            <input type="text" id="transfer-amount" name="transfer-amount">
+            <input type="text" id="amount" name="amount">
           </div>
         </div>     
-      <a class="button button-submit">Сontinue</a>
+      <button id="send-button" class="button button-submit">Сontinue</button>
     </form>
   </div>
 </body>

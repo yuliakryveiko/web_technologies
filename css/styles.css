@@ -123,8 +123,7 @@ footer .container .footer-links a, footer .container-transfer .footer-links a, f
   color: #182628;
 }
 .button:hover {
-  background-color: #a3c4c7;
-  color: #182628;
+  background-color: #93babd;
 }
 
 .button-signup {
@@ -137,8 +136,7 @@ footer .container .footer-links a, footer .container-transfer .footer-links a, f
   color: #013b3f;
 }
 .button-signup:hover {
-  background-color: #a3c4c7;
-  color: #182628;
+  background-color: #e5e5e5;
 }
 
 .button-submit {
@@ -151,8 +149,7 @@ footer .container .footer-links a, footer .container-transfer .footer-links a, f
   color: #f2f2f2;
 }
 .button-submit:hover {
-  background-color: #a3c4c7;
-  color: #182628;
+  background-color: #012326;
 }
 
 .button-getstarted {
@@ -166,8 +163,7 @@ footer .container .footer-links a, footer .container-transfer .footer-links a, f
   padding: 20px 40px;
 }
 .button-getstarted:hover {
-  background-color: #a3c4c7;
-  color: #182628;
+  background-color: #73a6aa;
 }
 
 form {

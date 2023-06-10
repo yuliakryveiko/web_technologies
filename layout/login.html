@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>CashFlow - Log in</title>
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/web-technologies-1/css/styles.css">
+  <script src="/web-technologies-1/javascript/login.js" defer></script>
 </head>
 <body>
   <nav>
@@ -12,14 +13,15 @@
   </nav> 
   <div class="container">
     <h1>Log in</h1>
-    <form>
+    <form id="login-form">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
-      <a href="user.html"class="button button-submit">Log in</a>
+      <button class="button button-submit">Log in</button>
       <p>Don't have an account?<a class="underform-link" href="signup.html">Sign up</a></p>
     </form>
   </div>
 </body>
+
 </html>

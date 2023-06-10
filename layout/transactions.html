@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>Transactions - CashFlow</title>
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/web-technologies-1/css/styles.css">
+  <script src="/web-technologies-1/javascript/transactions.js"></script>
 </head>
 <body>
   <nav>
@@ -19,14 +20,12 @@
   <div class="container container-transaction">
     <h1>Transactions</h1>
     <div class="filters">
-      <label for="date-filter">Filter by Date:</label>
-      <input type="date" id="date-filter" name="date-filter">
       <label for="type-filter">Filter by Type:</label>
       <select id="type-filter" name="type-filter">
-        <option value="all">All</option>
         <option value="sent">Sent</option>
         <option value="received">Received</option>
       </select>
+      <button class="button-submit" id="search-btn">Search</button>
     </div>
     <table>
       <thead>
@@ -37,31 +36,8 @@
           <th>Date</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>Yulia Kryveiko</td>
-          <td>Vitalii Mil</td>
-          <td>$50.00</td>
-          <td>2023-03-17</td>
-        </tr>
-        <tr>
-          <td>Vitalii Mil</td>
-          <td>Yulia Kryveiko</td>
-          <td>$100.00</td>
-          <td>2023-03-16</td>
-        </tr>
-        <tr>
-          <td>Yulia Kryveiko</td>
-          <td>Milftedge</td>
-          <td>$20.00</td>
-          <td>2023-03-15</td>
-        </tr>
-        <tr>
-          <td>Yulia Kryveiko</td>
-          <td>Milftedge</td>
-          <td>$20.00</td>
-          <td>2023-03-10</td>
-        </tr>
+      <tbody id="tbody">
+
       </tbody>
     </table>
   </div>
