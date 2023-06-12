@@ -1,0 +1,35 @@
+<div class="container container-transaction">
+    <h1>Transactions</h1>
+    <div class="filters">
+        <label for="type-filter">Filter by Type:</label>
+        <select id="type-filter" [(ngModel)]="typeFilter">
+            <option value="sent">Sent</option>
+            <option value="received">Received</option>
+        </select>
+        <button class="button-submit" id="search-btn" (click)="searchTransactions()">Search</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Sender</th>
+                <th>Receiver</th>
+                <th>Value</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transaction of transactions">
+                <td>
+                    <ng-container *ngIf="typeFilter === 'sent'; else received">{{ 'Me' }}</ng-container>
+                    <ng-template #received>{{ transaction.sentByUser }}</ng-template>
+                </td>
+                <td>
+                    <ng-container *ngIf="typeFilter === 'received'; else sent">{{ 'Me' }}</ng-container>
+                    <ng-template #sent>{{ transaction.sentToUser }}</ng-template>
+                </td>
+                <td>{{ transaction.value }}$</td>
+                <td>{{ formatDateTime(transaction.datePerformed) }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

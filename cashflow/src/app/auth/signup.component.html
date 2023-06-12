@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Sign Up</h1>
+    <form (ngSubmit)="onSubmit()" id="signup-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="username" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="email" required>
+      <label for="firstname">First name:</label>
+      <input type="text" id="firstname" name="firstname" [(ngModel)]="firstName" required>
+      <label for="lastname">Last name:</label>
+      <input type="text" id="lastname" name="lastname" [(ngModel)]="lastName" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirmPassword" [(ngModel)]="confirmPassword" required>
+      <button type="submit" class="button button-submit">Sign up</button>
+      <p>Already have an account? <a class="underform-link" routerLink="/user/login">Log In</a></p>
+    </form>
+  </div>
+  

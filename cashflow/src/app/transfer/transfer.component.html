@@ -1,0 +1,21 @@
+<div class="container container-transfer">
+    <h2>Send your money anytime, anywhere in the world.</h2>
+    <form (ngSubmit)="onSubmit()" id="send-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="recipient-name">Receiver ID</label>
+          <input type="text" id="recipient-name"  [(ngModel)]="sentToUser" name="sentToUser">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="transfer-amount">You Send</label>
+          <div class="input-group">
+            <input type="text" id="amount"  [(ngModel)]="amount" name="amount">
+          </div>
+        </div>
+      </div>
+      <button id="send-button" class="button button-submit">Continue</button>
+    </form>
+  </div>
+  
