@@ -1,0 +1,23 @@
+<div>
+    <div class="hero">
+        <h1>Send Money Online</h1>
+        <p>Quickly and securely transfer money to anyone, anywhere.</p>
+        <a *ngIf="!isLoggedIn()" routerLink="/user/login" class="button button-submit">Get Started</a>
+        <a *ngIf="isLoggedIn()" routerLink="/user/transfer" class="button button-submit">Transfer Money</a>
+
+    </div>
+    <div class="features">
+        <div class="feature">
+            <h2>Fast and Easy</h2>
+            <p>Transfer money in just a few clicks. No need to visit a bank or wait in line.</p>
+        </div>
+        <div class="feature">
+            <h2>Secure</h2>
+            <p>Your money is safe with us. We use advanced security measures to protect your transactions.</p>
+        </div>
+        <div class="feature">
+            <h2>Low Fees</h2>
+            <p>Our fees are transparent and competitive. You'll always know what you're paying.</p>
+        </div>
+    </div>
+</div>

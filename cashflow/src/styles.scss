@@ -1,0 +1,480 @@
+$primary-color: #013b3f;
+$secondary-color: #182628;
+$text-color: #f2f2f2;
+$contrast-color: #a3c4c7;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+$font-family: 'Montserrat', sans-serif;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  color: $secondary-color;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $text-color;
+  font-family: $font-family;
+}
+
+nav {
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  * {
+    color: $text-color;
+    text-decoration: none;
+    padding: 5px;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+  }
+
+  .links a {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+
+  .links a:hover,
+  .links a.active {
+    color: $contrast-color;
+  }
+}
+
+
+.hero {
+  height: 400px;
+  background-image: url('https://images.unsplash.com/photo-1615400504383-3b36dbb5d0a5');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $text-color;
+  
+  .button-submit{
+    padding: 20px 50px;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 100px;
+  margin-bottom: 100px;
+
+
+  .feature {
+    width: 30%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+
+
+    h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+footer {
+  background-color: $secondary-color;
+  color: $text-color;
+  height: 8%;
+  padding: 0px 20px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        font-size: 18px;
+        margin: 0 10px;
+        color: $text-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@mixin button($bg-color, $text-color) {
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  background-color: $bg-color;
+  color: $text-color;
+
+  &:hover {
+    background-color: darken($bg-color, 5%);
+    // color: $secondary-color;
+  }
+}
+
+.button {
+  @include button($contrast-color, $secondary-color);
+}
+
+.button-signup {
+  @include button($text-color, $primary-color);
+}
+
+.button-submit {
+  @include button($primary-color, $text-color);
+}
+
+.button-getstarted {
+  @include button(darken($contrast-color, 10%), $secondary-color);
+  padding: 20px 40px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 35px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: $secondary-color;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  p {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    flex-direction: column;
+
+    a {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 350px;
+  height: 550px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+  .button {
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.balance {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.container-user {
+  @extend .container;
+  max-width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  margin-bottom: 100px
+}
+
+.container-transaction {
+  @extend .container;
+  max-width: 90%;
+  margin: 50px auto;
+  background-color: $contrast-color;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+  margin-bottom: 100px
+}
+
+.container-transfer {
+  @extend .container;
+  margin-top: 30px;
+  max-width: 70%;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 2;
+  color: $secondary-color;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.filters label {
+  margin-right: 3rem;
+}
+
+.filters input[type="date"],
+.filters select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+  background-color: darken($contrast-color, 15%);
+}
+
+table th {
+  padding: 1rem;
+  text-align: center;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: darken($contrast-color, 7%);
+}
+
+table tbody td {
+  padding: 1.2rem;
+}
+
+.wallet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.balance-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.balance-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.balance-section p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.wallet-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+}
+
+.wallet-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wallet-form .form-group {
+  margin-bottom: 10px;
+}
+
+.wallet-form label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.wallet-form input[type="text"],
+.wallet-form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 2px solid gray;
+  transition: border-color 0.3s ease;
+}
+
+.wallet-form input[type="text"]:focus,
+.wallet-form input[type="number"]:focus {
+  outline: none;
+  border-color: black;
+}
+
+@media (max-width: 768px) {
+  // Styles for devices with a maximum width of 768px
+
+  .hero {
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .button-submit {
+      padding: 10px 20px;
+    }
+  }
+
+  .features {
+    flex-direction: column;
+
+    .feature {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .container-user {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .container-transaction {
+    max-width: 100%;
+  }
+
+  .container-transfer {
+    max-width: 90%;
+  }
+
+  // Add more styles for other elements as needed...
+}
+
+@media (max-width: 480px) {
+  // Styles for devices with a maximum width of 480px
+
+  .hero {
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .button-submit {
+      padding: 8px 16px;
+    }
+  }
+
+  .features {
+    padding: 30px;
+  }
+
+  // Add more styles for other elements as needed...
+}

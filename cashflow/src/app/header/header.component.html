@@ -1,0 +1,14 @@
+<nav>
+  <div class="logo">
+    <a routerLink="/main">CashFlow</a>
+  </div>
+  <div class="links" *ngIf="!isLoggedIn">
+    <a >Log in</a>
+    <a routerLink="/user/signup" class="button button-signup">Sign up</a>
+  </div>
+  <div class="links" *ngIf="isLoggedIn()">
+    <a routerLink="/user/profile">My profile</a>
+    <a routerLink="/user/transactions">Transactions</a>
+    <a routerLink="/user/transfer">Send Money</a>
+  </div>
+</nav>
